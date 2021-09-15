@@ -1,5 +1,14 @@
 # Node.js 코딩 패턴 (Routes-Controllers-Services 구조)
 > RCS구조이용한 User(추가)와 Comment(추가) 기능 구현 예제
+```
+├───routes
+│   ├───user-route.js
+├───services
+│   ├───user-service.js
+├───controllers
+│   ├───user-controller.js
+├───app.js
+```
 
 ## Code
 #### ./app.js
