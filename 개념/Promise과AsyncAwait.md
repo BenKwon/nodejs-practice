@@ -136,3 +136,17 @@ export const makeSmoothie = async () => {
 
 ### Async Await의 에러 핸들링
 > Try Catch문을 이용한다. 
+
+
+### 팁
+#### map을 활용해서 concurrent하게 비동기 처리
+```js
+const fruits = ['peach', 'pineapple' , 'strawberry'];
+const smoothie = fruits.map(async v => {
+   const emoji = await getFruit(v);
+   console.log(emoji);
+   return emojil
+});
+
+```
+> map을 활용해서 위와 같이 비동기 처리를 하면 concurrent하게 처리는 되나 순서성이 사라져서 과일이 랜덤하게 출력된다.
