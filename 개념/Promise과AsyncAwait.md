@@ -138,7 +138,8 @@ export const makeSmoothie = async () => {
 > Try Catch문을 이용한다. 
 
 
-### 팁
+
+### 반복 처리
 #### map을 활용해서 concurrent하게 비동기 처리
 ```js
 const fruits = ['peach', 'pineapple' , 'strawberry'];
