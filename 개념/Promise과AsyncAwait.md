@@ -149,4 +149,5 @@ const smoothie = fruits.map(async v => {
 });
 
 ```
-> map을 활용해서 위와 같이 비동기 처리를 하면 concurrent하게 처리는 되나 순서성이 사라져서 과일이 랜덤하게 출력된다.
+> map을 활용해서 위와 같이 비동기 처리를 하면 concurrent하게 처리는 되나 순서성이 사라져서 과일이 랜덤하게 출력된다.  
+> Promise.all이랑 비슷한 갈래로 처리되는 것 같다.
