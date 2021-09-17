@@ -8,8 +8,8 @@ node_modules
 ./RSC예시/node/node_modules
 
 #RSC 예시 db secret
-./RSC예시/node/config/config.json
-
+RSC예시/node/config/config.json
+config.json
 
 # local env files
 .env.local
