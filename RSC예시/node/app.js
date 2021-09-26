@@ -4,8 +4,11 @@ const router = express.Router();
 const path = require("path");
 const morgan = require("morgan");
 const nunjucks = require("nunjucks");
-// get the client
-// get the client
+const winston = require("winston");
+const appRoot = require("app-root-path"); // app root 경로를 가져오는 lib
+
+const logger = require("./config/winston");
+
 const app = express();
 app.set("port", process.env.PORT || 3001);
 app.set("view engine", "html");
@@ -14,10 +17,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 
 app.use(cors());
-const commentRouter = require("./router/comment-router");
-const userRouter = require("./router/user-router");
 
 //Router
+const commentRouter = require("./router/comment-router");
+
+const userRouter = require("./router/user-router");
+
+logger.info("message");
 app.use("/comment", commentRouter);
 app.use("/user", userRouter);
 
