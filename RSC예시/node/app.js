@@ -4,7 +4,6 @@ const router = express.Router();
 const path = require("path");
 const morgan = require("morgan");
 const nunjucks = require("nunjucks");
-const winston = require("winston");
 const appRoot = require("app-root-path"); // app root 경로를 가져오는 lib
 
 const logger = require("./config/winston");
