@@ -11,6 +11,9 @@ node_modules
 RSC예시/node/config/config.json
 config.json
 
+#logs
+./RSC예시/node/logs
+
 # local env files
 .env.local
 .env.*.local
