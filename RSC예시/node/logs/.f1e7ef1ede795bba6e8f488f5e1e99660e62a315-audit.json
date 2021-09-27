@@ -1,0 +1,14 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\k0188\\OneDrive\\바탕 화면\\개인공부\\nodejs\\nodejs-practice\\RSC예시\\node\\logs\\.f1e7ef1ede795bba6e8f488f5e1e99660e62a315-audit.json",
+    "files": [
+        {
+            "date": 1632664069326,
+            "name": "C:\\Users\\k0188\\OneDrive\\바탕 화면\\개인공부\\nodejs\\nodejs-practice\\RSC예시\\node\\logs\\2021-09-26.log",
+            "hash": "7cacdb688d8fab9367481b5732fba41e"
+        }
+    ]
+}
