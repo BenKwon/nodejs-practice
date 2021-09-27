@@ -1,4 +1,4 @@
-### jwt 동장 박식
+### jwt 동작 박식
 [사용이유](http://velopert.com/2389)  
 1. 가입(register)
 2. 로그인 -> jwt 토큰 생성 ( user의 id와 admin 여부 포함)  
