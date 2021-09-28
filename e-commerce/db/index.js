@@ -11,7 +11,7 @@ const connect = () => {
 	// 	.then(() => console.log("DB 연결 성공"))
 	// 	.catch((err) => console.log(err));
 	mongoose.connect(
-		"mongodb://root:ksj2302@localhost:27017/admin",
+		`mongodb://root:${process.env.MONGO_PASS}@localhost:27017/admin`,
 		{
 			dbName: "ecommerce",
 			useNewUrlParser: true,
