@@ -20,9 +20,10 @@ console.log("Hei");
 ### 생각 2
   
 단순히 지금 껏 공부한 이론으로 위 코드를 분석해보면 
-처음에 호출스택에 f()가 들어가고 console.log('Hei2'); 가 호츨스택에 실행되어서 나와 출력되고   
-그 다음 프로미스가 생성되어서 setTimeout()이 호출스택에 들어가서 실행되고 백그라운드에 1초짜리 timer가 올라가고  
-1초후에 task큐로가서 호출스택에 아무것도 없으면 then이 실행되어 result에 해당 값이 들어가고 console.log(result)와  
+처음에 호출스택에 f()가 들어가고 console.log('Hei2'); 가 호츨스택에 실행되어서   
+나와 출력되고 그 다음 프로미스가 생성되어서 setTimeout()이 호출스택에 들어가서  
+실행되고 백그라운드에 1초짜리 timer가 올라가고 1초후에 task큐로가서 호출스택에 아무것도  
+없으면 then이 실행되어 result에 해당 값이 들어가고 console.log(result)와  
 console.log("Hei3")가 출력된다고 생각되었다.  
 
 ### 의문점
