@@ -4,13 +4,15 @@ const path = require("path");
 const nunjucks = require("nunjucks");
 const dotenv = require("dotenv");
 
-const connect = require("./schemas");
+const connect = require("./db");
 // const indexRouter = require("./routes/index");
 // const usersRouter = require("./routes/users");
 // const commentsRouter = require("./routes/comments");
 const userRouter = require("./routes/user");
 const authRouter = require("./routes/auth");
 const productRouter = require("./routes/product");
+const orderRouter = require("./routes/order");
+const cartRouter = require("./routes/cart");
 
 dotenv.config();
 const app = express();
@@ -28,6 +30,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/api/users", userRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/products", productRouter);
+app.use("/api/carts", cartRouter);
+app.use("/api/orders", orderRouter);
 
 // app.use((req, res, next) => {
 // 	const error = new Error(`${req.method} ${req.url} 라우터가 없습니다.`);
