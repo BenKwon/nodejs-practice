@@ -2,7 +2,6 @@ const router = require("express").Router();
 const User = require("../models/User");
 const CryptoJS = require("crypto-js");
 const fs = require("fs");
-const session = require("express-session");
 
 router.get("/login", (req,res,next)=>{
     if(req.session.user === undefined){

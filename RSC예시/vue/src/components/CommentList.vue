@@ -24,6 +24,9 @@ export default {
   name: "CommentList",
   props:{
     comments: Array,
+  },
+  beforeCreate() {
+    console.log("hello");
   }
 }
 </script>

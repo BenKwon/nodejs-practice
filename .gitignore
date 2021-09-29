@@ -14,6 +14,9 @@ config.json
 #logs
 ./RSC예시/node/logs
 
+#dialog log analystic system
+log-analystic-back
+
 # local env files
 .env.local
 .env.*.local
