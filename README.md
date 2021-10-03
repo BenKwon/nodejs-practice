@@ -3,5 +3,5 @@
 
 - [Express에서 Routes-Controllers-Services 구조(Vue & Node)](https://github.com/BenKwon/nodejs-practice/tree/master/RSC%EC%98%88%EC%8B%9C)
 - [레퍼런스용 Session 모듈 실습 with MongoDB](https://github.com/BenKwon/nodejs-practice/tree/master/session-sample)
-- [쇼핑몰 REST API with MongoDB,jwt](https://github.com/BenKwon/nodejs-practice/tree/master/e-commerce)
+- [쇼핑몰 REST API with MongoDB, JWT 방식 인증](https://github.com/BenKwon/nodejs-practice/tree/master/e-commerce)
 - [노드 및 JS 개념](https://github.com/BenKwon/nodejs-practice/tree/master/%EA%B0%9C%EB%85%90)
