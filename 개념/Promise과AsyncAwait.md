@@ -132,7 +132,9 @@ export const makeSmoothie = async () => {
   return smoothie;
 };
 ```
-위 코드는 배열안에 있는 모든 프로미스들이 병렬적으로 실행되는 코드이다.
+위 코드는 배열안에 있는 모든 프로미스들이 병렬적으로 실행되는 코드이다.  
+
+<br>
 
 ### Async Await의 에러 핸들링
 > Try Catch문을 이용한다.  
