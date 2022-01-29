@@ -9,10 +9,10 @@ button.addEventListener('click',() =>{
 ```
 
 위 처럼 하면 부모의 this를 가지기 때문에 동작을 안한다.
+버튼 자체의 textContent를 가르켜야 하는데 익명함수는 부모의 this를 가져와서 this.textContext라는 것은 undefined이다.  
+따라서 옛날 함수방식으로 바꿔줘야 동작한다.
 
-따라서 옛날함수방식으로 바꿔줘야 동작함
-
-Vue에서도 비슷한 문제가 있었는데
+챗봇 로그 분석 시스템 프로젝트 진행중 Vue개발 중 이와 비슷한 문제가 있었는데
 
 #### LoginMagement.vue 
 ```js
