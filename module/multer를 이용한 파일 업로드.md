@@ -121,8 +121,9 @@ Note that req.body might not have been fully populated yet. It depends on the or
 <br>
 
 ## multer 파일 업로드 에러 핸들링
-공식 문서에 있는 에러 핸들링 예제를 참고하여 만들어봤다.  \
-post의 argument로 들어가있던 upload()가 아예 post의 미들웨어 함수로 들어왔다.  
+공식 문서에 있는 에러 핸들링 예제를 참고하여 만들어봤다.  
+post의 argument로 들어가있던 upload()가 아예 post의 미들웨어 함수로 들어왔다. 
+upload.array()자체가 미들웨어이므로 미들웨어 확장법을 이용하여 처리할 수 있다.  
 ```js
 //file upload
 //post의 ar
