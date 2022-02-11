@@ -64,7 +64,9 @@ const storage = multer.diskStorage({
 });
 ```
 ### destination
-destination을 설정하는 부분이다. destination을 보면 함수다.  
+destination을 설정하는 부분이다. destination은 req, file, callback함수를 인자로 받는다.  
+저장 하고자 하는 경로를 만들어 인자로 받은 콜백함수에 인자로 넣어주고 호출하면 된다.  
+파일명도 마찬가지로 원하는 파일명이 담긴 변수를 콜백함수에 인자로 넣어주고 호출하면 된다.  
 
 ```js
 const destination = function (req, file, cb) {
@@ -97,14 +99,16 @@ const filename = function (req, file, cb) {
   })
 }
 ```
-공식 문서를 보면 
+파일명이나 경로를 만들때 사용자가 담아 보낸 body의 데이터를 참조하여 생성하고자 할 수 도있다.  
+그럴 경우에 req.body를 이용하면 되는데 사용자가 분명히 넣어서 보낸 데이터가 destination혹은 filename 함수가 호출될 때 담겨있지 않는 경우가 있다.  
+그 이유는 공식 문서를 보면 나와있다.   
 ```
 Each function gets passed both the request (req) and some information about the file (file) to aid with the decision.
 
 Note that req.body might not have been fully populated yet. It depends on the order that the client transmits fields and files to the server
 ```
 라고 되어있다. 즉 destination과 filename에서 request에서 업로드할 파일에 대한 정보를 받는다고 한다.  
-하지만 req.body가 전부 받아오지는 않을 수 있고 한다. 그래서 클라이언트에서 파일을 보낼 때 파일 업로드에 관련해서 사용되는 세팅 값을 같이 body에 담아와서 쓰고 싶으면 파일보다 앞에 놓고 보내야한다.  
+하지만 req.body가 전부 받아오지는 않을 수 있고 한다. 그래서 클라이언트에서 파일을 보낼 때 파일 업로드에 관련해서 사용되는 세팅 값을 같이 body에 담아와서 쓰고 싶으면 파일보다 앞에 놓고 보내야한다. 혹은 아래서 설명할 multer 파일 업로드 에러 핸들링 방식으로 하면 클라이언트가 데이터를 보낼 때 순서를 신경쓰지 않아도 된다.  
 
 **index.html**
 ```html
