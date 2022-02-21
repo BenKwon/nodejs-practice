@@ -13,7 +13,7 @@ Promise에 대해서 좀 더 알아봐야겠다는 생각은 해왔지만 개발
 
 **exec은 callback방식이다.**
 
-```
+```js
 exec(cmd, (error, stdout, stderr) => {
    if (error) {
     console.warn(error);
@@ -26,7 +26,7 @@ exec(cmd, (error, stdout, stderr) => {
 
 본문 예제에서는 **setTimeout**으로 예를 들려고 한다.
 
-```
+```js
 function setTimeoutPromisify(delay) {
     return new Promise((resolve, reject) => {
         setTimeout(()=>{
@@ -39,7 +39,7 @@ function setTimeoutPromisify(delay) {
 
 위와 같이 하면 **setTimeOut**을 프로미스처럼 사용할 수 있게 된다. 즉 **setTimeOut**함수를 **async**/**await**과 함께 사용하여 가독성을 높일 수 있다.
 
-```
+```js
 function setTimeoutPromisify(delay) {
     return new Promise((resolve, reject) => {
         setTimeout(()=>{
