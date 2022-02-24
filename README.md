@@ -1,6 +1,9 @@
 # nodejs-practice ✏️
 나중에 참고할 만한 노드(Javascript) 소스 코드,공부 내용 및 의문,생각 기록
 
+(2022-02-24) 최근 노드 공부 기록은 블로그([benkwon.tistory.com](https://benkwon.tistory.com/category/Backend/node))포스팅을 작성하는 방법 위주로 하고 있습니다.  
+
+
 - [Express에서 Routes-Controllers-Services 구조(Vue & Node)](https://github.com/BenKwon/nodejs-practice/tree/master/RSC%EC%98%88%EC%8B%9C)
 - [레퍼런스용 Session 모듈 가이드with MongoDB](https://github.com/BenKwon/nodejs-practice/tree/master/session-sample)
 - [쇼핑몰 REST API with MongoDB, JWT 방식 인증](https://github.com/BenKwon/nodejs-practice/tree/master/e-commerce)
