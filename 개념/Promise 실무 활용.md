@@ -59,4 +59,20 @@ function setTimeoutPromisify(delay) {
 
 ### 마치며..
 
-Promise는 자바스크립트에서 동기적인 부분을 동기적으로 동작하게 바꿀 때 가독성이 있게 바꾸는 좋은 개념이다. 물론 위 예제처럼 콜백 체인이 복잡하지 않은 경우 그냥 사용하는게 낫겠지만 async/await에 익숙한 경우 혹은 체인이 복잡해서 콜백 지옥이 다가오는 경우는 Promise를 쓰자.
+사실 위에서 프로미스 객체를 직접 생성하여 callback패턴으로 Promise패턴으로 바꿨지만 이미 util모듈의 promisify를 통해 이를 대신 해주는 모듈이 있다.
+```js
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
+
+async function lsExample() {
+  const { stdout, stderr } = await exec('ls');
+  console.log('stdout:', stdout);
+  console.error('stderr:', stderr);
+}
+lsExample();
+```
+하지만 이를 쓰기 전에 직접 해보는거랑 안해보는거랑은 큰 차이가 있다고 생각한다.
+
+ 
+
+Promise는 자바스크립트에서 동기적인 부분을 동기적으로 동작하게 바꿀 때 가독성이 있게 바꾸는 좋은 개념이다. 물론 위 예제처럼 콜백 체인이 복잡하지 않은 경우 그냥 사용하는게 낫겠지만    async/await에 익숙한 경우 혹은 체인이 복잡해서 콜백 지옥이 다가오는 경우는 Promise를 쓰자.
